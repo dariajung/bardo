@@ -50,8 +50,8 @@ function draw(width, height) {
 	// clear the canvas before doing anything
 	ctx.clearRect(0, 0, width * 4, height * 4);
 
-	for (var i = 1; i < width; i++) {
-		for (var j = 1; j < height; j++) {
+	for (var i = 0; i < width; i++) {
+		for (var j = 0; j < height; j++) {
 			if (mainGrid[i][j] === 1) {
 				ctx.fillStyle = styles.sample();
 				ctx.fillRect(i * 4, j * 4, 4, 4); // x, y, width, height

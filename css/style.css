@@ -41,8 +41,10 @@ body #canvas {
 }
 body .introduction,
 body .rules,
-body .game {
-  margin-bottom: 2em;
+body .game,
+body .patterns {
+  margin-top: 2em;
+  margin-bottom: 5em;
 }
 body p {
   font-size: 1.3em;
@@ -71,6 +73,8 @@ body .center {
   text-align: center;
 }
 body .divider {
+  margin-top: 1em;
+  margin-bottom: 5em;
   background-image: url('../assets/stardust.png');
   height: 350px;
   position: relative;
