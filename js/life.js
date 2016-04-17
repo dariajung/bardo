@@ -43,7 +43,7 @@ function fillGrid(width, height) {
 function draw(width, height) {
 	var canvas = document.getElementById('canvas');
 	var ctx = canvas.getContext('2d'); // get canvas to draw on
-	console.log(ctx);
+	// console.log(ctx);
 
 	var styles = ["rgb(88, 73, 144)", "rgb(0, 114, 135)", "rgb(142, 51, 109)", "rgb(46, 134, 97)"];
 
@@ -59,7 +59,7 @@ function draw(width, height) {
 		}
 	}
 
-	console.log(ctx);
+	// console.log(ctx);
 }
 
 function liveOneGeneration(w, h) {
@@ -147,8 +147,16 @@ createGrid(gridWidth);
 fillGrid(gridWidth, gridHeight);
 draw(gridWidth, gridHeight);
 
-setInterval(function() {
-    draw(gridWidth, gridHeight);
-    liveOneGeneration(gridWidth, gridHeight);
-}, 200);
+var startEl = document.getElementById('start-button');
+
+startEl.addEventListener('click', function() {
+	console.log('clicked!');
+    setInterval(function() {
+	    draw(gridWidth, gridHeight);
+	    liveOneGeneration(gridWidth, gridHeight);
+	}, 200);
+}, false);
+
+
+
 

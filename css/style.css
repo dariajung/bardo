@@ -20,11 +20,28 @@ body ul {
 body ul li {
   margin: .5em;
 }
+body .button {
+  margin: 0 auto;
+  padding: 1em;
+  background-color: #5bc0de;
+  color: #fff;
+  width: 150px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+body .button:hover {
+  background-color: #47ADCC;
+}
 body #canvas {
   margin: 2em;
 }
 body .introduction,
-body .rules {
+body .rules,
+body .game {
   margin-bottom: 2em;
 }
 body p {
