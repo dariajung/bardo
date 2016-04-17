@@ -140,24 +140,46 @@ function liveOneGeneration(w, h) {
 	}
 }
 
-document.getElementById('canvas').width = gridWidth * 4;
-document.getElementById('canvas').height = gridHeight * 4;
+$(document).ready(function() {
 
-createGrid(gridWidth);
-fillGrid(gridWidth, gridHeight);
-draw(gridWidth, gridHeight);
+	document.getElementById('canvas').width = gridWidth * 4;
+	document.getElementById('canvas').height = gridHeight * 4;
 
-var startEl = document.getElementById('start-button');
+	createGrid(gridWidth);
+	fillGrid(gridWidth, gridHeight);
+	draw(gridWidth, gridHeight);
 
-startEl.addEventListener('click', function() {
-	console.log('clicked!');
+	var startEl = $('#life-button');
+	var isPaused = true;
 
-    setInterval(function() {
-	    draw(gridWidth, gridHeight);
-	    liveOneGeneration(gridWidth, gridHeight);
+	startEl.on('click', function() {
+		if (startEl.hasClass('pause-button')) {
+			startEl.removeClass('pause-button');
+			startEl.addClass('start-button');
+
+			startEl.text('Resume');
+			isPaused = true;
+
+		} else if (startEl.hasClass('start-button')) {
+			startEl.removeClass('start-button');
+			startEl.addClass('pause-button');
+
+			startEl.text('Pause');
+			isPaused = false;
+		}
+	});
+
+
+	setInterval(function() {
+		if (!isPaused) {
+			draw(gridWidth, gridHeight);
+	    	liveOneGeneration(gridWidth, gridHeight);
+		}
+	    
 	}, 100);
-}, false);
 
+
+});
 
 
 
