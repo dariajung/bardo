@@ -9,6 +9,10 @@ var gridHeight = 800;
 var mainGrid = createGrid(gridWidth);
 var tempGrid = createGrid(gridWidth);
 
+Array.prototype.sample = function() {
+	return this[Math.floor(Math.random()*this.length)];
+}
+
 // grid will have dimensions 
 function createGrid(r) {
 	var arr = [];
@@ -41,13 +45,15 @@ function draw(width, height) {
 	var ctx = canvas.getContext('2d'); // get canvas to draw on
 	console.log(ctx);
 
+	var styles = ["rgb(88, 73, 144)", "rgb(0, 114, 135)", "rgb(142, 51, 109)", "rgb(46, 134, 97)"];
+
 	// clear the canvas before doing anything
 	ctx.clearRect(0, 0, width, height);
 
 	for (var i = 1; i < width; i++) {
 		for (var j = 1; j < height; j++) {
 			if (mainGrid[i][j] === 1) {
-				ctx.fillStyle = "rgb(0, 114, 135)";
+				ctx.fillStyle = styles.sample();
 				ctx.fillRect(i, j, 1, 1); // x, y, width, height
 			}
 		}
