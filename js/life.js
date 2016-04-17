@@ -4,8 +4,8 @@
 // 3. If a live cell has more than three live neighbours, it dies
 // 4. If a live cell has two or three live neighbours, it continues living
 
-var gridWidth = 400;
-var gridHeight = 400;
+var gridWidth = 200;
+var gridHeight = 200;
 var mainGrid = createGrid(gridWidth);
 var tempGrid = createGrid(gridWidth);
 
@@ -48,13 +48,13 @@ function draw(width, height) {
 	var styles = ["rgb(88, 73, 144)", "rgb(0, 114, 135)", "rgb(142, 51, 109)", "rgb(46, 134, 97)"];
 
 	// clear the canvas before doing anything
-	ctx.clearRect(0, 0, width, height);
+	ctx.clearRect(0, 0, width * 4, height * 4);
 
 	for (var i = 1; i < width; i++) {
 		for (var j = 1; j < height; j++) {
 			if (mainGrid[i][j] === 1) {
 				ctx.fillStyle = styles.sample();
-				ctx.fillRect(i, j, 1, 1); // x, y, width, height
+				ctx.fillRect(i * 4, j * 4, 4, 4); // x, y, width, height
 			}
 		}
 	}
@@ -140,8 +140,8 @@ function liveOneGeneration(w, h) {
 	}
 }
 
-document.getElementById('canvas').width = gridWidth;
-document.getElementById('canvas').height = gridHeight;
+document.getElementById('canvas').width = gridWidth * 4;
+document.getElementById('canvas').height = gridHeight * 4;
 
 createGrid(gridWidth);
 fillGrid(gridWidth, gridHeight);
@@ -151,10 +151,11 @@ var startEl = document.getElementById('start-button');
 
 startEl.addEventListener('click', function() {
 	console.log('clicked!');
+
     setInterval(function() {
 	    draw(gridWidth, gridHeight);
 	    liveOneGeneration(gridWidth, gridHeight);
-	}, 200);
+	}, 100);
 }, false);
 
 
