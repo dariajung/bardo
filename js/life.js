@@ -4,8 +4,8 @@
 // 3. If a live cell has more than three live neighbours, it dies
 // 4. If a live cell has two or three live neighbours, it continues living
 
-var gridWidth = 300;
-var gridHeight = 300;
+var gridWidth = 400;
+var gridHeight = 400;
 var mainGrid = createGrid(gridWidth);
 var tempGrid = createGrid(gridWidth);
 
@@ -150,5 +150,5 @@ draw(gridWidth, gridHeight);
 setInterval(function() {
     draw(gridWidth, gridHeight);
     liveOneGeneration(gridWidth, gridHeight);
-}, 50);
+}, 200);
 

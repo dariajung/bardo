@@ -11,13 +11,36 @@
 
 	<div class="frame column-lg">
 		<h1 class='center'>Conway's Game of Life</h1>
+		
+		<hr>
 
 		<div class='introduction'>
-			
+			<h2>Introduction</h1>
+			<p>The Game of Life is a cellular automaton devised by British Mathematican John H. Conway. There are no players, and each subsequent evolution of the cells in the "game" is determined by the original configuration of the game. You are merely an observer in how the Game of Life evolves.</p>
+		</div>
+
+		<div class='rules'>
+			<h2>Rules to the Game of Life</h1>
+			<p>The Game exists in a universe of a two-dimensional orthogonal grid of "cells," each of which is in one of two possible states: alive or dead. Every cell interacts with eight of its neighbors (top left, top, top right, immediate left, immediate right, bottom left, bottom, bottom right) in the following ways:</p>
+			<ul>
+				<li>1. Any live cell with fewer than two live neighbours dies, as if caused by under-population.</li>
+				<li>2. Any live cell with two or three live neighbours lives on to the next generation.</li>
+				<li>3. Any live cell with more than three live neighbours dies, as if by over-population. </li>
+				<li>4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+			</ul>
 		</div>
 
 		<div class='center'>
 			<canvas id="canvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+		</div>
+	</div>
+
+	<div class='divider'>
+		<div class='quote center'>
+			<blockquote>
+				People think that mathematics is complicated. Mathematics is the simple bit. It's the stuff we <i>can</i> understand. It's cats that are complicated.
+			</blockquote>
+			<p> &mdash; John Horton Conway</p>
 		</div>
 	</div>
 

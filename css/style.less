@@ -1,9 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Quicksand);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
 
 
 body {
 	font-family: 'EB Garamond', serif;
+
+	margin-top: 2em;
 
 	.column-lg {
 		margin-top: 1em;
@@ -12,14 +14,83 @@ body {
 		margin-right: auto;
 		width: 960px;
 	}
-}
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Quicksand', sans-serif;
-	margin-bottom: 1.5em;
-	line-height: 1.5em;
-}
+	ul {
+		margin-top: 2em;
+		font-size: 1.2em;
+		margin-left: 4em;
+    	list-style: none;
 
-.center {
-	text-align: center;
+    	li {
+    		margin: .5em;
+    	}
+	}	
+
+	#canvas {
+		margin: 2em;
+	}
+
+	.introduction, .rules {
+		margin-bottom: 2em;
+	}
+
+	p {
+		font-size: 1.3em;
+		line-height: 1.5em;
+	}
+
+	hr {
+		color: #616060;
+		width: 200px;
+		margin: 2em auto;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Inconsolata', sans-serif;
+		margin-bottom: 1.5em;
+		line-height: 1.5em;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	.divider {
+		background-image: url('../assets/stardust.png');
+		height: 350px;
+		position: relative;
+		width: 100%;
+
+		p {
+			color: #fff;
+		}
+
+		.quote {
+			max-width: 960px;
+			position: absolute;
+			top: 30%;
+			left: 20%;
+			font-size: 2em;
+			text-shadow: 3px 3px 3px #616060;
+		}
+
+		blockquote {
+			color: #fff;
+		}
+
+		q:before,
+		blockquote:before {
+		    content: '"';
+		    color: #fff;
+		}
+		q:after,
+		blockquote:after {
+		    content: '"';
+		    color: #fff;
+		}
+	}
 }

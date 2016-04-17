@@ -1,7 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Quicksand);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
 body {
   font-family: 'EB Garamond', serif;
+  margin-top: 2em;
 }
 body .column-lg {
   margin-top: 1em;
@@ -10,16 +11,74 @@ body .column-lg {
   margin-right: auto;
   width: 960px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Quicksand', sans-serif;
+body ul {
+  margin-top: 2em;
+  font-size: 1.2em;
+  margin-left: 4em;
+  list-style: none;
+}
+body ul li {
+  margin: .5em;
+}
+body #canvas {
+  margin: 2em;
+}
+body .introduction,
+body .rules {
+  margin-bottom: 2em;
+}
+body p {
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+body hr {
+  color: #616060;
+  width: 200px;
+  margin: 2em auto;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: 'Inconsolata', sans-serif;
   margin-bottom: 1.5em;
   line-height: 1.5em;
 }
-.center {
+body h1 {
+  font-size: 3em;
+}
+body .center {
   text-align: center;
+}
+body .divider {
+  background-image: url('../assets/stardust.png');
+  height: 350px;
+  position: relative;
+  width: 100%;
+}
+body .divider p {
+  color: #fff;
+}
+body .divider .quote {
+  max-width: 960px;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  font-size: 2em;
+  text-shadow: 3px 3px 3px #616060;
+}
+body .divider blockquote {
+  color: #fff;
+}
+body .divider q:before,
+body .divider blockquote:before {
+  content: '"';
+  color: #fff;
+}
+body .divider q:after,
+body .divider blockquote:after {
+  content: '"';
+  color: #fff;
 }
