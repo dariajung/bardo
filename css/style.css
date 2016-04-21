@@ -36,7 +36,8 @@ body .button {
 body .button:hover {
   background-color: #47ADCC;
 }
-body #canvas {
+body #canvas,
+body #canvas_custom {
   margin: 2em;
 }
 body .introduction,
