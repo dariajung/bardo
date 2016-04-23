@@ -310,8 +310,6 @@ $(document).ready(function() {
 
 			$(this).text('Resume');
 
-
-
 		} else if ($(this).hasClass('start-button')) {
 			$(this).removeClass('start-button');
 			$(this).addClass('pause-button');
@@ -327,30 +325,36 @@ $(document).ready(function() {
 
 	// grid1 draw
 	setInterval(function() {
+
 		if ($('#main-life-button').hasClass('pause-button')) {
+
 			draw(gridWidth, gridHeight, grid1, 'canvas', scale1);
 	    	ret = liveOneGeneration(gridWidth, gridHeight, grid1, temp1);
 	    	grid1 = ret[0];
 	    	temp1 = ret[1];
 
 	    	gen1++;
+	    	
 
 	    	$('.main-gen').text('Generations: ' + gen1);
 		}
 
 		if ($('#snd-life-button').hasClass('pause-button')) {
+
 			draw(corder_ship.length, corder_ship[0].length, corder_ship, 'canvas_custom', scale2);
 
 	    	ret = liveOneGeneration(corder_ship.length, corder_ship[0].length, corder_ship, temp2);
 	    	corder_ship = ret[0];
 	    	temp2 = ret[1];
-
+	    	
 	    	gen2++;
 
 	    	$('.snd-gen').text('Generations: ' + gen2);
 		}
 
+
 		if ($('#third-life-button').hasClass('pause-button')) {
+
 			draw(grid3.length, grid3[0].length, grid3, 'canvas_custom_2', scale3);
 
 	    	ret = liveOneGeneration(grid3.length, grid3[0].length, grid3, temp3);
